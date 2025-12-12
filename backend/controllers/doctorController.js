@@ -136,6 +136,10 @@ const doctorDashboard = async (req, res) => {
         let patients = []
 
         appointments.map((item) => {
+
+            if (item.isCompleted || item.payment) {
+            earnings += item.amount
+    }
             if (!patients.includes(item.userId)) {
                 patients.push(item.userId)
             }

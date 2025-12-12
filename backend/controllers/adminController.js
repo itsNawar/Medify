@@ -128,7 +128,7 @@ const AppointmentCancel = async (req, res) => {
 
         await doctorModel.findByIdAndUpdate(docId, { slots_booked })
 
-        res.json({ success: false, message: error.message })
+         res.json({ success: true, message: 'Appointment Cancelled' })
 
     } catch (error) {
         console.log(error)

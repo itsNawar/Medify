@@ -64,8 +64,9 @@ const DoctorDashboard = () => {
                     ? <p className='text-red-400 text-xs font-medium'>Cancelled</p>
                     : item.isCompleted
                       ? <p className='text-green-500 text-xs font-medium'>Completed</p>
-                      : <div className='flex'>
-                        <img onClick={() => cancelAppointment(item._id)} className='w-10 cursor-pointer' src={assets.cancel_icon} alt="" />
+                      : <div className='flex items-center gap-2'>
+                        {!item.payment && <img onClick={() => cancelAppointment(item._id)} className='w-10 cursor-pointer' src={assets.cancel_icon} alt="" />}
+                        {item.payment && <p className='text-green-500 text-xs font-medium'>Paid</p>}
                         <img onClick={() => completeAppointment(item._id)} className='w-10 cursor-pointer' src={assets.tick_icon} alt="" />
                       </div>
                 }

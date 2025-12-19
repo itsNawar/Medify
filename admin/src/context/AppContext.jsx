@@ -26,7 +26,7 @@ const AppContextProvider = (props) => {
         return dateArray[0] + " " + months[Number(dateArray[1])] + " " + dateArray[2]
     }
     
-    const backendUrl = https://medify-l4j9.onrender.com/;
+    const backendUrl = "https://medify-l4j9.onrender.com";
     
     const [doctors, setDoctors] = useState([]);
     const [loading, setLoading] = useState(true);

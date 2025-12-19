@@ -1,8 +1,8 @@
 import { createContext, useEffect, useState, useMemo } from "react";
 import { doctors } from "../assets/assets";
 import axios from 'axios';
-import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify';
 
 export const AppContext = createContext();
 
@@ -25,7 +25,7 @@ const AppContextProvider = (props) => {
         return dateArray[0] + " " + months[Number(dateArray[1])] + " " + dateArray[2]
     }
 
-    const backendUrl = https://medify-l4j9.onrender.com/;
+    const backendUrl = "https://medify-l4j9.onrender.com";
 
     const [doctors, setDoctors] = useState([]);
     const [loading, setLoading] = useState(true);
